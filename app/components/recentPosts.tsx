@@ -19,6 +19,13 @@ export function RecentPosts() {
               new Date(b.metadata.publishedAt)
             ) {
               return -1;
+            } else if (
+              new Date(a.metadata.publishedAt) <
+              new Date(b.metadata.publishedAt)
+            ) {
+              return 1;
+            } else {
+              return 0;
             }
           })
           .map((post) => (
