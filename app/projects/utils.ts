@@ -8,6 +8,7 @@ type Metadata = {
     slug: string;
     projectLink?: string;
     shortDescription: string;
+    featured: string;
 }
 
 function parseFrontmatter(fileContent: string) {
