@@ -22,7 +22,11 @@ export function Projects() {
                     className="flex items-center transition-all text-neutral-600 dark:text-neutral-300 hover:text-neutral-800 dark:hover:text-neutral-100"
                     rel="noopener noreferrer"
                     target="_blank"
-                    href={(project.metadata.projectLink) ? `${project.metadata.projectLink}` : `${project.metadata.githubLink}`}
+                    href={
+                      project.metadata.projectLink
+                        ? `${project.metadata.projectLink}`
+                        : `${project.metadata.githubLink}`
+                    }
                   >
                     <ArrowIcon />
                     <p className="ml-2 h-6">{project.metadata.name}</p>
