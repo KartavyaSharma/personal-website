@@ -1,6 +1,6 @@
 import { getProjectDetails } from "app/projects/utils";
-import Link from "next/link";
 import { ArrowIcon } from "./icons";
+import Link from "next/link";
 
 export function Projects() {
   let projects = getProjectDetails().slice(0, 5);

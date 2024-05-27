@@ -9,6 +9,17 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
+            href="https://v0.kartavyas.com"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">v0</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
             href="mailto:kartavya@outlook.com"
           >
             <ArrowIcon />

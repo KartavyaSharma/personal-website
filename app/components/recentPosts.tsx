@@ -38,8 +38,25 @@ export function RecentPosts() {
                 <p className="text-neutral-600 dark:text-neutral-400 w-[110px] tabular-nums">
                   {formatDate(post.metadata.publishedAt, false)}
                 </p>
-                <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                  {post.metadata.title}
+                <p className="group inline-flex items-center justify-center text-neutral-900 dark:text-neutral-100 tracking-tight">
+                  <span className="w-full">
+                    {post.metadata.title}
+                  </span>
+                  <svg
+                    className="w-4 h-4 ms-1 rtl:rotate-180 opacity-0 group-hover:opacity-100 transition-opacity text-neutral-600 dark:text-neutral-300 hover:text-neutral-800 dark:hover:text-neutral-100"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
                 </p>
               </div>
             </Link>
