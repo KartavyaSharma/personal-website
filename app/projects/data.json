@@ -4,27 +4,31 @@
         "name": "trapp",
         "githubLink": "https://www.github.com/KartavyaSharma/trapp",
         "projectLink": "",
-        "shortDescription": "A simple, automated job application tracker on the SHELL."
+        "shortDescription": "A simple, automated job application tracker on the SHELL.",
+        "detailFile": ""
     },
     {
         "githubOwner": "KartavyaSharma",
         "name": "salkatech",
         "githubLink": "",
         "projectLink": "https://www.salkatech.com",
-        "shortDescription": "Telecommunication and Satellite company website."
+        "shortDescription": "Telecommunication and Satellite company website.",
+        "detailFile": ""
     },
     {
         "githubOwner": "KartavyaSharma",
         "name": "roze",
         "githubLink": "https://github.com/KartavyaSharma/ROZE-Voice-Assistant",
         "projectLink": "",
-        "shortDescription": "Notification narrator and voice assistant for Android."
+        "shortDescription": "Notification narrator and voice assistant for Android.",
+        "detailFile": ""
     },
     {
         "githubOwner": "KartavyaSharma",
-        "name": "covaxstatus",
-        "githubLink": "https://github.com/KartavyaSharma/COVaxStatus",
+        "name": "rmembr",
+        "githubLink": "https://github.com/KartavyaSharma/rmembr",
         "projectLink": "",
-        "shortDescription": "Accessible COVID-19 vaccination appointment viewer."
+        "shortDescription": "Scheduler service for active recall and spaced repetition.",
+        "detailFile": ""
     }
 ]
