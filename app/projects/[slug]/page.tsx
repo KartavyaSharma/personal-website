@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import { getProjectDetails } from "../utils"
 import { CustomMDX } from "app/components/mdx"
 import { baseUrl } from "app/sitemap"
+import Technologies from "app/components/technologiesUsed"
 
 export async function generateStaticParams() {
     let projects = getProjectDetails()
@@ -45,6 +46,7 @@ export default function Project({params}) {
       </h1>
       <article className="prose">
         <CustomMDX source={project.content} />
+        <Technologies params={project.metadata} />
       </article>
     </section>
     )

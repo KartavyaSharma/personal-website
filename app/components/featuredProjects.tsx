@@ -37,7 +37,7 @@ export function FeaturedProjects() {
                   href={`/projects/${project.slug}`}
                   className="group inline-flex items-center justify-center text-neutral-900 dark:text-neutral-100 tracking-tight"
                 >
-                  <span className="w-full overflow-hidden truncate">
+                  <span className="w-full">
                     {project.metadata.shortDescription}
                   </span>
                   <svg

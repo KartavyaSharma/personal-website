@@ -31,14 +31,14 @@ export function RecentPosts() {
           .map((post) => (
             <Link
               key={post.slug}
-              className="flex flex-col space-y-1 mb-4"
+              className="flex flex-col space-y-1 mb-4 group"
               href={`/blog/${post.slug}`}
             >
               <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
                 <p className="text-neutral-600 dark:text-neutral-400 w-[110px] tabular-nums">
                   {formatDate(post.metadata.publishedAt, false)}
                 </p>
-                <p className="group inline-flex items-center justify-center text-neutral-900 dark:text-neutral-100 tracking-tight">
+                <p className="inline-flex items-center justify-center text-neutral-900 dark:text-neutral-100 tracking-tight">
                   <span className="w-full">
                     {post.metadata.title}
                   </span>
