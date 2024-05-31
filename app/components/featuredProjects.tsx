@@ -1,9 +1,28 @@
-import { getProjectDetails } from "app/projects/utils";
+"use client";
+import { useEffect, useState } from "react";
 import { ArrowIcon } from "./icons";
+import { Metadata } from "../projects/utils/utils";
+import { useMouse } from "../projects/utils/client";
 import Link from "next/link";
 
-export function FeaturedProjects() {
-  let projects = getProjectDetails();
+interface Project {
+  metadata: Metadata;
+  slug: string;
+  content: string;
+}
+
+interface Props {
+  projects: Project[];
+}
+
+export function FeaturedProjects({ projects }: Props) {
+
+  const [clientProjects, setClientProjects] = useState(projects);
+  const { ref, x, y } = useMouse();
+
+  useEffect(() => {
+    setClientProjects(projects);
+  }, [projects]);
 
   return (
     <div className="flex flex-col space-y-4">
@@ -14,7 +33,7 @@ export function FeaturedProjects() {
       </div>
       <div className="mb-4">
         <ul className="font-sm flex flex-col space-x-0 dark:text-neutral-300">
-          {projects.filter((project) => project.metadata.featured === '1').map((project) => (
+          {clientProjects.filter((project) => project.metadata.featured === '1').map((project) => (
             <li key={project.slug} className="flex flex-col space-y-1 mb-4">
               <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
                 <div className="w-[110px] tabular-nums">
@@ -36,6 +55,7 @@ export function FeaturedProjects() {
                   key={project.slug}
                   href={`/projects/${project.slug}`}
                   className="group inline-flex items-center justify-center text-neutral-900 dark:text-neutral-100 tracking-tight"
+                  ref={ref}
                 >
                   <span className="w-full">
                     {project.metadata.shortDescription}

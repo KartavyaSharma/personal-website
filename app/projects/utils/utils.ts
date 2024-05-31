@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-type Metadata = {
+export type Metadata = {
     githubOwner: string;
     githubLink: string;
     name: string;
@@ -31,7 +31,7 @@ function parseFrontmatter(fileContent: string) {
 
 // Function getProjects iterates through array in data.json and opulates project list.
 export function getImportantProjects(): Metadata[] {
-    let data = require('./data.json');
+    let data = require('./../data.json');
     let projects = data.slice(0, 5);
     const metadataArray = projects.map((project) => {
         return {
@@ -75,4 +75,11 @@ function getMDXData(dir) {
 
 export function getProjectDetails() {
     return getMDXData(path.join(process.cwd(), "app", "projects", "projects"));
+}
+
+export function capitalizeFirstLetter(str: string): string {
+    if (str.length === 0) {
+        return str; // Return the string as is if it's empty
+    }
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }

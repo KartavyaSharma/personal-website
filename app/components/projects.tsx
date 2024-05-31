@@ -1,4 +1,4 @@
-import { getProjectDetails } from "app/projects/utils";
+import { getProjectDetails } from "app/projects/utils/utils";
 import { ArrowIcon } from "./icons";
 import Link from "next/link";
 

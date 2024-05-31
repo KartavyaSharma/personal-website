@@ -1,6 +1,7 @@
 import { RecentPosts } from "./components/recentPosts";
 import { Intro } from "./components/intro";
 import { FeaturedProjects } from "./components/featuredProjects";
+import { getProjectDetails } from "./projects/utils/utils";
 
 export default function Page() {
   return (
@@ -10,7 +11,7 @@ export default function Page() {
         <RecentPosts />
       </div>
       <div className="my-8">
-        <FeaturedProjects />
+        <FeaturedProjects projects={getProjectDetails()} />
       </div>
     </section>
   );
